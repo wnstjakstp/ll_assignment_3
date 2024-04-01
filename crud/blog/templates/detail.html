@@ -1,0 +1,11 @@
+<h1>게시물 상세정보</h1>
+<a href="{% url 'blog_home' %}">게시물 목록 보기</a>
+<hr>
+<br>
+
+<h4>{{ blog.title }}</h4>
+<p>{{ blog.content }}</p>
+<p>{{ blog.created_at }}</p>
+
+<hr>
+

@@ -1,0 +1,12 @@
+<h1>게시물 목록</h1>
+<a href="{% url 'create' %}">새글 작성하기</a>
+<hr>
+<br>
+
+{% for blog in blogs %}
+    <h3>제목: {{ blog.title }}</h3>
+    <p>본문: {{ blog.content }}</p>
+    <p>작성시간: {{ blog.created_at }}</p>
+    <a href="{% url 'detail' blog.id %}">상세 정보</a>
+    <hr>
+{% endfor %}
